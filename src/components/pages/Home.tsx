@@ -13,10 +13,37 @@ import img4 from '../../assets/img4.png'
 export function Home() {
   return (
     <div>
+      {/* <h1 className="mb-6 text-white">Official Industry Partner</h1> */}
+      <p className="mb-2 ml-2 text-black-50 text-m text-center"></p>
+      <p className="mb-2 ml-2 text-black-50 text-m text-center">
+        Gnyan Pragya is currently an the official industry partner for Savitribai Phule Pune University and DES Pune University
+        <br/>bridging the gap between academic excellence and industry requirements.
+      </p>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
+        <p className="mb-12 mt-12 text-black-100 text-m text-center"></p>
+        {/* Content */}
+        <div className="container mx-auto px-4 py-24 relative z-10">
+          <div className="max-w-3xl">
+
+            <div className="flex gap-4 flex-wrap">
+              <Link to="/academic-programs">
+                <Button size="lg" className="bg-teal-100 text-black text-blue-700 hover:bg-blue-50">
+                  Explore Programs
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link to="/enquiry">
+                <Button size="lg" className="bg-teal-100 text-blue-700 hover:bg-blue-50">
+                  Get in Touch
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Background Image Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-20">
+        <div className="h-full absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-20">
           <div 
             className="bg-cover bg-center" 
             style={{ backgroundImage: `url(${img1})` }}
@@ -34,29 +61,7 @@ export function Home() {
             style={{ backgroundImage: `url(${img4})`  }}
           />
         </div>
-        
-        {/* Content */}
-        <div className="container mx-auto px-4 py-24 relative z-10">
-          <div className="max-w-3xl">
-            {/* <h1 className="mb-6 text-white">Official Industry Partner</h1> */}
-            <p className="mb-8 text-black-50 text-lg">
-              Gnyan Pragya currently serves as the official industry partner for Savitribai Phule Pune University and DES Pune University, bridging the gap between academic excellence and industry requirements.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <Link to="/academic-programs">
-                <Button size="lg" className="bg-blue-100 text-blue-700 hover:bg-blue-50">
-                  Explore Programs
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="/enquiry">
-                <Button size="lg" className="bg-blue-100 text-blue-700 hover:bg-blue-50">
-                  Get in Touch
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <p></p>
       </section>
 
       {/* Quick Access Cards */}

@@ -26,8 +26,8 @@ export function Header() {
           <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img src={gplogo} alt="Gnyan Pragya" className="h-16 w-auto mix-blend-multiply" />
             <div className="hidden sm:block">
-              <img src={gptext} alt="Gnyan Pragya" className="h-9 w-11 mix-blend-multiply" />
-              <div className="text-sm text-gray-200 ml-2"><i>Bridging Academia and Industry</i></div>
+              <img src={gptext} alt="Gnyan Pragya" className="h-6 w-11 mix-blend-multiply" />
+              <div className="text-sm text-gray-200"><i>Bridging Academia and Industry</i></div>
             </div>
           </Link>
 
