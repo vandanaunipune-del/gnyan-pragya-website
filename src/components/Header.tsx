@@ -1,4 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import gplogo from '../assets/gnyan-pragya.png';
 import gptext from '../assets/gp-text2.png';
 
@@ -16,6 +18,7 @@ export function Header() {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -32,28 +35,57 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="flex items-center gap-1 flex-wrap justify-end">
+          <nav className="md:flex items-center gap-1 flex-wrap justify-end">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-md transition-colors text-sm whitespace-nowrap ${
-                  isActive(link.path)
-                    ? 'bg-gradient-to-r from-blue-600 to-teal-500 text-black'
-                    : 'text-gray-700 hover:bg-gray-100'
-                }`}
+                className={`px-3 py-2 rounded-md transition-colors text-sm whitespace-nowrap ${isActive(link.path)
+                  ? 'bg-gradient-to-r from-blue-600 to-teal-500 text-white'
+                  : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="hidden block md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+            onClick={() => setMobileMenuOpen(mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Caption */}
+        <div className="sm:hidden mt-1">
+          <div className="text-sm text-gray-700">Bridging academia and industry</div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <nav className="container mx-auto px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-4 py-3 rounded-md transition-colors ${isActive(link.path)
+                  ? 'bg-gradient-to-r from-blue-600 to-teal-500 text-white'
+                  : 'text-gray-700 hover:bg-gray-100'
+                  }`}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
         </div>
-
-        {/* Mobile Caption */}
-        <div className="sm:hidden mt-1">
-          <div className="text-sm text-gray-700">Bridging Academia and Industry</div>
-        </div>
-      </div>
+      )}
     </header>
   );
 }
