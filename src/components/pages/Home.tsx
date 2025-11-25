@@ -14,11 +14,31 @@ export function Home() {
   return (
     <div>
       {/* <h1 className="mb-6 text-white">Official Industry Partner</h1> */}
-      <p className="mb-2 ml-2 text-black-50 text-m text-center"></p>
-      <p className="mb-2 ml-2 text-black-50 text-m text-center">
+      {/* <p className="mb-2 ml-2 text-black-50 text-m text-center">
         Gnyan Pragya is currently an the official industry partner for Savitribai Phule Pune University and DES Pune University
         <br/>bridging the gap between academic excellence and industry requirements.
-      </p>
+      </p> */}
+
+           {/* Official Industry Partner Section */}
+      <section className="py-2 bg-gradient-to-br from-blue-50 via-teal-50 to-blue-50"   style={{ background: 'linear-gradient(to right, #f1f4faff, #dbe4f7ff,  #14b8a6)'}}>
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-2 md:p-3 border border-blue-100">
+          <p className="text-gray-800 leading-relaxed text-base md:text-lg text-center">
+            <span style={{ color: '#089282ff', fontWeight: '500' }}>
+              GNYAN PRAGYA
+            </span>{" "} is the official industry partner for{" "}
+            <span style={{ color: '#8B4513', fontWeight: '500' }}>
+              Savitribai Phule Pune University
+            </span>{" "}
+            and{" "}
+            <span style={{ color: '#C41E3A', fontWeight: '500' }}>
+              DES Pune University
+            </span>
+            , bridging the gap between academic excellence
+            and industry requirements.
+          </p>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Content */}
@@ -32,7 +52,7 @@ export function Home() {
                 </Button>
               </Link>
               <Link to="/enquiry">
-                <Button size="lg" className="bg-teal-100 text-blue-700 hover:bg-blue-50">
+                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                   Get in Touch
                 </Button>
               </Link>
@@ -42,25 +62,27 @@ export function Home() {
 
         {/* Background Image Collage */}
         <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-80">
-          <div 
-            className="bg-cover bg-center" 
+          <div
+            className="bg-cover bg-center"
             style={{ backgroundImage: `url(${img1})` }}
           />
-          <div 
-            className="bg-cover bg-center" 
-            style={{ backgroundImage: `url(${img2})`  }}
+          <div
+            className="bg-cover bg-center"
+            style={{ backgroundImage: `url(${img2})` }}
           />
-          <div 
-            className="bg-cover bg-center" 
-            style={{ backgroundImage: `url(${img3})`  }}
+          <div
+            className="bg-cover bg-center"
+            style={{ backgroundImage: `url(${img3})` }}
           />
-          <div 
-            className="bg-cover bg-center" 
-            style={{ backgroundImage: `url(${img4})`  }}
+          <div
+            className="bg-cover bg-center"
+            style={{ backgroundImage: `url(${img4})` }}
           />
         </div>
         <p></p>
       </section>
+
+ 
 
       {/* Quick Access Cards */}
       <section className="py-12 bg-white">

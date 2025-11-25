@@ -478,6 +478,10 @@
     margin-top: calc(var(--spacing) * 1);
   }
 
+   .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -949,6 +953,10 @@
     background-position: center;
   }
 
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -1114,9 +1122,15 @@
     text-underline-offset: 4px;
   }
 
-  .opacity-80 {
-    opacity: .8;
+  .opacity-20 {
+    opacity: .4;
   }
+
+  
+  .opacity-80 {
+    opacity: .85;
+  }
+
 
   .mix-blend-multiply {
     mix-blend-mode: multiply;
