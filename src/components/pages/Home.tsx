@@ -21,14 +21,12 @@ export function Home() {
       </p>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <p className="mb-12 mt-12 text-black-100 text-m text-center"></p>
         {/* Content */}
         <div className="container mx-auto px-4 py-24 relative z-10">
           <div className="max-w-3xl">
-
             <div className="flex gap-4 flex-wrap">
               <Link to="/academic-programs">
-                <Button size="lg" className="bg-teal-100 text-black text-blue-700 hover:bg-blue-50">
+                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
                   Explore Programs
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -43,7 +41,7 @@ export function Home() {
         </div>
 
         {/* Background Image Collage */}
-        <div className="h-full absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-20">
+        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-20">
           <div 
             className="bg-cover bg-center" 
             style={{ backgroundImage: `url(${img1})` }}
@@ -103,7 +101,7 @@ export function Home() {
                     <Users className="w-6 h-6 text-blue-500 group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="mb-1 group-hover:text-blue-500 transition-colors">Faculty</h3>
+                    <h3 className="mb-1 group-hover:text-blue-500 transition-colors">Our Team</h3>
                     <p className="text-gray-600 text-sm">Experienced educators and industry experts</p>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ export function Header() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/academic-programs', label: 'Academic Programs' },
-    { path: '/faculty', label: 'Faculty' },
+    { path: '/faculty', label: 'Our Team' },
     { path: '/placements', label: 'Placements' },
     { path: '/events', label: 'Events' },
     { path: '/careers', label: 'Careers' },
