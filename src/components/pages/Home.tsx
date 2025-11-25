@@ -41,7 +41,7 @@ export function Home() {
         </div>
 
         {/* Background Image Collage */}
-        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-20">
+        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-4 opacity-80">
           <div 
             className="bg-cover bg-center" 
             style={{ backgroundImage: `url(${img1})` }}
