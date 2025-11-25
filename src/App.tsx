@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { Home } from './components/pages/Home';
 import { Enquiry } from './components/pages/Enquiry';
 import { AcademicPrograms } from './components/pages/AcademicPrograms';
+import { UndergraduatePrograms } from './components/pages/UndergraduatePrograms';
 import { Careers } from './components/pages/Careers';
 import { Faculty } from './components/pages/Faculty';
 import { Placements } from './components/pages/Placements';
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/enquiry" element={<Enquiry />} />
             <Route path="/academic-programs" element={<AcademicPrograms />} />
+            <Route path="/academic-programs/undergraduate" element={<UndergraduatePrograms />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/placements" element={<Placements />} />
